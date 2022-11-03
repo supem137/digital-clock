@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Noto+Sans+Balinese:wght@600;700&family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dangrek&display=swap');
+
+body{
+    position: absolute;
+    translate: -50% -80%;
+    top: 50%;
+    left: 50%;
+}
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+#switch{
+    position: relative;
+    background-color: rgb(244, 244, 196);
+    width: 200px;
+    height: 100px;
+    display: block;
+    border-radius: 50px;
+}
+
+#switch::after{
+    content: '';
+    position: absolute;
+    background-color: rgb(0, 255, 255);
+    cursor: pointer;
+    top: 4.5px;
+    left: 5px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50px;
+    transition: 0.3s;
+    z-index: 1;
+}
+
+input:checked + #switch::after{
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+    background-color: rgb(68, 188, 202);
+}
+
+input:checked + #switch{
+    background-color: rgb(198, 253, 198);
+}
+
+#text24{
+    font-family: 'Dangrek', cursive;
+    font-size: 40px;
+    color: rgb(103, 106, 109);
+    position: absolute;
+    translate: -50% -115%;
+    left: 30%;
+    z-index: 0;
+}
+
+#text12{
+    font-family: 'Dangrek', cursive;
+    font-size: 40px;
+    color: rgb(16, 65, 108);
+    position: absolute;
+    translate: -50% -115%;
+    left: 70%;
+    z-index: 0;
+}
+
+input:active + #switch::after{
+    width: 100px;
+}
+
+.container1{
+    font-family: 'Noto Sans Balinese', sans-serif;
+    font-size: 100px;
+    display: flex;
+}
+
+.toggleBtn{
+    position: absolute;
+    translate: -50%;
+    left: 50%;
+    top: 90%;
+}
+
+.classListStyle{
+    display: none;
+}
+
